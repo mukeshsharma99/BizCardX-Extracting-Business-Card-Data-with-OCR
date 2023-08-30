@@ -1,4 +1,4 @@
-
+# Import Libraries
 import pandas as pd
 import streamlit as st
 from streamlit_option_menu import option_menu
@@ -20,6 +20,7 @@ st.set_page_config(page_title="BizCardX: Extracting Business Card Data with OCR 
                    initial_sidebar_state="expanded",                           
                    menu_items={'About': """# This OCR app is created by *Mukesh Sharma*!"""})
 st.markdown("<h1 style='text-align: center; color: white;'>BizCardX: Extracting Business Card Data with OCR</h1>", unsafe_allow_html=True)
+
 # SETTING-UP BACKGROUND IMAGE
 def setting_bg():
     st.markdown(f""" <style>.stApp {{
@@ -27,6 +28,7 @@ def setting_bg():
                         background-size: cover}}
                      </style>""",unsafe_allow_html=True) 
 setting_bg()
+
 # CREATING OPTION MENU
 selected = option_menu(None, ["Home","Upload & Extract","Modify"], 
                        icons=["home","cloud-upload-alt","edit"],
@@ -47,7 +49,7 @@ mydb = sql.connect(host="localhost",
                    database= "bizcard"
                   )
 mycursor = mydb.cursor(buffered=True)
-#mycursor.execute("create database bizcardx_db")
+#mycursor.execute("create database bizcard")
 
 # TABLE CREATION
 mycursor.execute('''CREATE TABLE IF NOT EXISTS card_data
@@ -85,7 +87,7 @@ if selected == "Upload & Extract":
         st.image(image, caption="Uploaded Image", use_column_width=True)
         st.write("Extracted Text:")
 
-        reader = easyocr.Reader(['en'])  # 
+        reader = easyocr.Reader(['en']) 
         result = reader.readtext(image)
         extracted_text = '\n'.join([res[1] for res in result])
         st.write(extracted_text)
