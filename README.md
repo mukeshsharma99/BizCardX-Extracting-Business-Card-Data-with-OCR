@@ -19,5 +19,5 @@ Modify: This section allows users to select an entry from the database using a d
 Clone the repository or download the python script.
 Run the script using the command line: streamlit run app.py
 The application will open in a new tab of your web browser. You can then navigate through the application, upload images of business cards, and view or modify the extracted data.
-Note: Ensure your MySQL server is running and the database details in the script match your MySQL setup.
+Note: Ensure your MySQL server is running and the database details in the script match your MySQL setup. 
     
