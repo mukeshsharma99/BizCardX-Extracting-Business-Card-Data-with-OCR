@@ -7,7 +7,7 @@ import mysql.connector as sql
 from PIL import Image
 import cv2
 import os
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt  
 import re     
 
 
