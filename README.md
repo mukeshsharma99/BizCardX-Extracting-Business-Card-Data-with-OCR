@@ -5,7 +5,7 @@ BizCardX is a Streamlit web application which extracts data from business cards 
 
 The application allows users to view, modify, or delete the extracted data. It also has a user interface for uploading business card images and a table interface for displaying the extracted data. The application is created by Mukesh Sharma
 
-Prerequisites
+Prerequisites  
 # To run this application, you'll need:
 
 Python environment (Python 3.x recommended)
