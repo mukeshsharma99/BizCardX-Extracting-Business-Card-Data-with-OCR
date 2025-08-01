@@ -8,7 +8,7 @@ The application allows users to view, modify, or delete the extracted data. It a
 Prerequisites  
 # To run this application, you'll need:
 
-Python environment (Python 3.x recommended)
+Python environment (Python 3.x recommended)  
 Streamlit, Pandas, easyOCR, PIL, cv2, matplotlib, re, mysql-connector-python libraries installed
 MySQL server setup and running
 #    Features
